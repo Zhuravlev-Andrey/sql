@@ -1,0 +1,11 @@
+CREATE FUNCTION func_minimum(VARIADIC arr NUMERIC[])
+RETURNS INTEGER AS $$
+BEGIN
+    RETURN (SELECT MIN(num) FROM unnest(arr) AS num);
+END;
+$$ LANGUAGE PLPGSQL;
+
+DROP FUNCTION func_minimum;
+
+
+SELECT func_minimum(VARIADIC arr => ARRAY[10.0, -1.0, 5.0, 4.4]);

@@ -1,0 +1,1 @@
+UPDATE menu SET price = (price - price * 0.1)::INT WHERE pizza_name = 'greek pizza'

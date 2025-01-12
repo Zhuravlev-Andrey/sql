@@ -1,0 +1,5 @@
+BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+SELECT SUM(rating) FROM pizzeria;
+
+INSERT INTO pizzeria (id,name,rating) VALUES(11,'Kazan Pizza 2', 4);

@@ -1,0 +1,1 @@
+COMMENT ON TABLE person_discounts IS 'расчет скидки от количества покупок каждого покупателя'
